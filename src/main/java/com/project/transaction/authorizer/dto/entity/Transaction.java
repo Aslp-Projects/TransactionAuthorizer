@@ -1,7 +1,5 @@
 package com.project.transaction.authorizer.dto.entity;
 
-import com.project.transaction.authorizer.dto.TransactionDto;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
