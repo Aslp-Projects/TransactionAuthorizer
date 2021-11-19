@@ -1,1 +1,69 @@
 # TransactionAuthorizer
+
+Microservicio encargado de crear cuentas, actualizar montos disponibles por cuenta y realizar registro de transacciones
+
+
+### HealthController
+
+#### Nodo raíz
+```java
+@RequestMapping("health")
+```
+#### Recursos
+```
+    GET   /health
+```
+
+### HealthController
+
+#### Nodo raíz
+```java
+@RequestMapping("transaction")
+```
+#### Recursos
+```
+    POST  /transaction
+    GET   /accounts
+```
+
+
+
+
+#### Recursos 
+Metodo | ruta | descripción
+--- | --- | ---
+GET | /health | Obtiene estado de aplicación
+POST | /transaction | genera transaccion recibiendo un queryParam de tipo string
+GET | /accounts | Obtiene listado de cuentas de BD H2
+
+
+
+## Uso
+
+Comando:
+```bash
+mvn clean install
+```
+
+- Compilación
+- Generación de archivo .jar
+- Pruebas
+
+
+## Acceso a BD H2 mientras se ejecuta aplicacion:
+1. Se debe ingresar a la ruta: http://localhost:8080/h2-console
+   - JDBC URL: jdbc:h2:mem:testdb
+   - User: user
+   - Password: pass
+   
+
+
+
+## Hecho con
+
+* [Maven](https://maven.apache.org/) - Administración de dependencias
+* [Spring boot](https://spring.io/guides/gs/spring-boot/) - Framework
+
+## Autor
+
+* **Anderson Lopez** - *Trabajo inicial* - [Git](https://github.com/AsLopez)

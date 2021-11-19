@@ -11,7 +11,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/transaction")
+@RequestMapping("transaction")
 public class TransactionController {
 
     ITransactionService transactionService;
@@ -27,7 +27,7 @@ public class TransactionController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping(value="all")
+    @GetMapping("accounts")
     public ResponseEntity<List<Account>> getAccounts() {
         return ResponseEntity.ok(accountService.getAccounts());
     }
