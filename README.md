@@ -2,6 +2,27 @@
 
 Microservicio encargado de crear cuentas, actualizar montos disponibles por cuenta y realizar registro de transacciones
 
+## Uso
+
+Comando:
+```bash
+mvn clean install
+```
+
+- Compilación
+- Generación de archivo .jar
+- Pruebas
+
+### El ingreso de las operaciones (json como string) es por medio de consola
+
+
+## Acceso a BD H2 mientras se ejecuta aplicacion:
+1. Se debe ingresar a la ruta: http://localhost:8080/h2-console
+   - JDBC URL: jdbc:h2:mem:testdb
+   - User: user
+   - Password: pass
+
+
 
 ### HealthController
 
@@ -27,36 +48,12 @@ Microservicio encargado de crear cuentas, actualizar montos disponibles por cuen
 ```
 
 
-
-
-#### Recursos 
+#### Recursos
 Metodo | ruta | descripción
 --- | --- | ---
 GET | /health | Obtiene estado de aplicación
 POST | /transaction | genera transaccion recibiendo un requestParam de tipo string
 GET | /accounts | Obtiene listado de cuentas de BD H2
-
-
-
-## Uso
-
-Comando:
-```bash
-mvn clean install
-```
-
-- Compilación
-- Generación de archivo .jar
-- Pruebas
-
-
-## Acceso a BD H2 mientras se ejecuta aplicacion:
-1. Se debe ingresar a la ruta: http://localhost:8080/h2-console
-   - JDBC URL: jdbc:h2:mem:testdb
-   - User: user
-   - Password: pass
-   
-
 
 
 ## Hecho con
