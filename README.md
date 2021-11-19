@@ -33,7 +33,7 @@ Microservicio encargado de crear cuentas, actualizar montos disponibles por cuen
 Metodo | ruta | descripción
 --- | --- | ---
 GET | /health | Obtiene estado de aplicación
-POST | /transaction | genera transaccion recibiendo un queryParam de tipo string
+POST | /transaction | genera transaccion recibiendo un requestParam de tipo string
 GET | /accounts | Obtiene listado de cuentas de BD H2
 
 

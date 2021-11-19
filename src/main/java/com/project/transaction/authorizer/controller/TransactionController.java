@@ -18,7 +18,7 @@ public class TransactionController {
     IAccountService accountService;
 
     @PostMapping()
-    public ResponseEntity<Void> transaction(String input){
+    public ResponseEntity<Void> transaction(@RequestParam String input){
         try {
             transactionService.runProcess(input);
         } catch (Exception e) {
